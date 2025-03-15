@@ -4,7 +4,7 @@ sed -i 's/\[]/\["13.61.152.141"]/' /home/ubuntu/projet-chain/chain_app/settings.
 
 python manage.py migrate 
 python manage.py makemigrations     
-python manage.py collectstatic
+python manage.py collectstatic --noinput
 sudo service gunicorn restart
 sudo service nginx restart
 #sudo tail -f /var/log/nginx/error.log
